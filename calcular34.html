@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Calculo de Materiales</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+<!--         <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="calcular.html">Calculo de Materiales</a>
+                </li>
+            </ul>
+        </div> -->
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+<!--         <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Expandir</a>
+            </div>
+        </div> -->
+        <div style="width: 500px; margin-left: 5cm; margin-top: 1cm">
+            <table class="table table-striped" id="tablaUno">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Estructura</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select class="form-control estructuras">
+                                <option></option>
+                            </select>
+                        </td>
+                        <td><input class='form-control input-width cellwidth' placeholder='Cantidad'></td>
+                        <td></td>
+                    </tr>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" style="text-align: left;">
+                                <input type="button" class="btn btn-lg btn-block " onclick="addRow()" value="Agregar fila   "/>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </tbody>
+            </table>
+        </div>
+            <button class="btn btn-primary" onclick="generar_Tabla()" type="button" style="margin-top: 0.5cm; margin-left: 5.2cm;margin-bottom: 1cm">Calcular materiales</button>
+            <button class="btn btn-primary" onclick="refrescar()" type="button" style="margin-top: 0.5cm; margin-left: 5.2cm;margin-bottom: 1cm">Refrescar</button>
+            <button class="btn btn-primary" onclick="redirigir()" type="button" style="margin-top: 0.5cm; margin-left: 5.2cm;margin-bottom: 1cm">Pagina Principal</button>
+        </div>
+        <div style="width: 1000px; margin-top: 0.5cm; margin-left: 5.2cm" id="contenedorTabla"></div>
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="datosd.js"></script>
+    <script src="calcular.js"></script>
+    <script src="materiales.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    //$("#menu-toggle").click(function(e) {
+    //   e.preventDefault();
+    //    $("#wrapper").toggleClass("toggled");
+    // });
+        populate_select();
+    </script>
+
+</body>
+
+</html>
